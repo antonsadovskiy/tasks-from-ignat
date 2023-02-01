@@ -1,18 +1,25 @@
 .message {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .imageAndText {
     display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
 }
 
 .imageAndText img {
     width: 48px;
+    height: 48px;
+    margin-top: 12px;
 }
 
 .text {
     background-color: #0066CC;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 10px;
+    color: white;
+    height: 60px;
 }
 
 .text:after {
@@ -20,20 +27,20 @@
 }
 
 .name {
-    font-size: 18px;
+    padding: 3px 10px 0 10px;
+    font-size: 16px;
     font-weight: 600;
-    color: white;
 }
 
 .messageText {
-
-    font-size: 16px;
+    padding: 10px 10px 5px 10px;
     font-weight: 400;
-    color: white;
-
-
+    font-size: 14px;
 }
 
 .time {
-
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 14px;
+    margin-right: 9px;
 }

@@ -1,15 +1,18 @@
 .friendMessage {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .friendImageAndText {
     display: flex;
     gap: 10px;
+    align-items: flex-end;
 }
 
 .friendImageAndText img {
     width: 48px;
     height: 48px;
+    margin-top: 12px;
 }
 
 .friendText {
@@ -23,14 +26,14 @@
 
 .friendName {
     padding: 3px 10px 0 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .friendMessageText {
     padding: 10px 10px 5px 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .friendTime {
@@ -38,4 +41,5 @@
     flex-direction: row;
     font-size: 14px;
     margin-left: 9px;
+    margin-bottom: 24px;
 }

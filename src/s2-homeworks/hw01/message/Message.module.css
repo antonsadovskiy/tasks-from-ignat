@@ -20,6 +20,7 @@
     background-color: #0066CC;
     border-radius: 10px 10px 0 10px;
     color: white;
+    box-shadow: 1px 1px 3px gray;
 }
 
 .text:after {
@@ -29,21 +30,24 @@
 .name {
     display: flex;
     justify-content: flex-end;
-    padding: 3px 10px 0 10px;
+    padding: 5px 10px 0 10px;
     font-size: 18px;
     font-weight: 600;
+    line-height: 19px;
 }
 
 .messageText {
+    font-family: 'Montserrat', sans-serif;
     padding: 10px 10px 5px 10px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px;
 }
 
 .time {
     display: flex;
     flex-direction: row-reverse;
-    font-size: 14px;
+    font-size: 12px;
     margin-right: 9px;
     margin-bottom: 24px;
+    font-weight: bold;
 }

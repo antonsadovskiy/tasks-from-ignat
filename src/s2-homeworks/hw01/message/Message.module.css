@@ -3,15 +3,16 @@
 }
 
 .imageAndText {
-
+    display: flex;
 }
 
 .imageAndText img {
-
+    width: 48px;
 }
 
 .text {
-
+    background-color: #0066CC;
+    border-radius: 10px;
 }
 
 .text:after {
@@ -19,10 +20,17 @@
 }
 
 .name {
-
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
 }
 
 .messageText {
+
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+
 
 }
 

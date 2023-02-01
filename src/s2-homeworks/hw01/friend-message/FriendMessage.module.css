@@ -3,15 +3,16 @@
 }
 
 .friendImageAndText {
-
+    display: flex;
 }
 
 .friendImageAndText img {
-
+    width: 48px;
 }
 
 .friendText {
-
+    background-color: #F5F7FB;
+    border-radius: 10px;
 }
 
 .friendText:after {

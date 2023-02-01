@@ -16,12 +16,24 @@
 }
 
 .friendText {
+    font-family: 'Montserrat', sans-serif;
     background-color: #F5F7FB;
     border-radius: 10px 10px 10px 0;
     box-shadow: 1px 1px 3px gray;
+    position: relative;
+    max-width: 650px;
 }
 
 .friendText:after {
+    /*position: absolute;*/
+    /*content: '';*/
+    /*bottom: 0px;*/
+    /*left: -10px;*/
+    /*width: 20px;*/
+    /*height: 10px;*/
+    /*background-color: #F5F7FB;*/
+    /*box-shadow: 0px 1px 1px gray;*/
+    /*background: radial-gradient(circle at top left, transparent 45%, #F5F7FB 20%);*/
 
 }
 

@@ -6,6 +6,7 @@
 .imageAndText {
     display: flex;
     flex-direction: row-reverse;
+    align-items: flex-end;
     gap: 10px;
 }
 
@@ -19,7 +20,6 @@
     background-color: #0066CC;
     border-radius: 10px 10px 0 10px;
     color: white;
-    height: 60px;
 }
 
 .text:after {
@@ -27,15 +27,17 @@
 }
 
 .name {
+    display: flex;
+    justify-content: flex-end;
     padding: 3px 10px 0 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .messageText {
     padding: 10px 10px 5px 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .time {
@@ -43,4 +45,5 @@
     flex-direction: row-reverse;
     font-size: 14px;
     margin-right: 9px;
+    margin-bottom: 24px;
 }

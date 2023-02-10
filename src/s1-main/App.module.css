@@ -2,6 +2,9 @@
     --header_height: 60px;
     width: 1064px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .hw {
@@ -10,5 +13,9 @@
 }
 
 .hwTitle {
-
+    margin-bottom: 30px;
+    font-family:'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
 }

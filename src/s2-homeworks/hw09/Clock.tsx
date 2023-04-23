@@ -28,7 +28,9 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`|| <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const formatDate = (time: number) => time < 10? `0${time}` : time
+
+    const stringTime = `${formatDate(date.getHours())}:${formatDate(date.getMinutes())}:${formatDate(date.getSeconds())}`|| <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
 
     const day = date.getDate() < 10 ? `0${date.getDate()}.` : `${date.getDate()}.`
     const month = date.getMonth() < 10 ? `0${date.getMonth() + 1}.` : `${date.getMonth() + 1}.`

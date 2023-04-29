@@ -3,5 +3,6 @@
 }
 
 .loading {
-
+    font-weight: lighter;
+    color: grey;
 }

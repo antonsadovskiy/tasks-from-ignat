@@ -7,12 +7,12 @@ import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
 
 /*
-* 1 - дописать SuperPagination
-* 2 - дописать SuperSort
-* 3 - проверить pureChange тестами
-* 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15
-* 4 - сделать стили в соответствии с дизайном
-* 5 - добавить HW15 в HW5/pages/JuniorPlus
+* 1 - дописать SuperPagination +
+* 2 - дописать SuperSort +
+* 3 - проверить pureChange тестами +
+* 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15 +
+* 4 - сделать стили в соответствии с дизайном +
+* 5 - добавить HW15 в HW5/pages/JuniorPlus +
 * */
 
 type TechType = {
@@ -28,6 +28,12 @@ type ParamsType = {
 }
 
 const getTechs = (params: ParamsType) => {
+    const {sort, page, count} = params
+
+    console.log('sort: ', sort)
+    console.log('page: ', page)
+    console.log('count: ', count)
+
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
             'https://samurai.it-incubator.io/api/3.0/homework/test3',
@@ -52,35 +58,31 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                setLoading(false)
                 // сохранить пришедшие данные
-
+                setTechs(res?.data.techs || [])
                 //
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
+        setPage(newPage)
+        setCount(newCount)
 
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        sendQuery({page: newPage, count: newCount})
+        setSearchParams(searchParams)
     }
 
     const onChangeSort = (newSort: string) => {
+
+        console.log('function: ' + newSort)
         // делает студент
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        sendQuery({sort: newSort, page: page, count: count})
+        setSearchParams(searchParams)
     }
 
     useEffect(() => {
@@ -118,12 +120,12 @@ const HW15 = () => {
 
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
-                        tech
+                        Tech
                         <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
                     </div>
 
                     <div className={s.developerHeader}>
-                        developer
+                        Developer
                         <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
                     </div>
                 </div>
